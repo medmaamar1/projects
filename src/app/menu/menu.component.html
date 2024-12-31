@@ -1,0 +1,60 @@
+<body>
+<div class="menu-container">
+  <aside class="categories">
+    <ul>
+      <li><a href="#pizza">Pizza</a></li>
+      <li><a href="#pasta">Pasta</a></li>
+      <li><a href="#juices">Juices</a></li>
+      <li><a href="#desserts">Desserts</a></li>
+    </ul>
+  </aside>
+
+  <section class="menu-content">
+    <h2 id="pizza">Pizza</h2>
+    <div class="dishes">
+      <div *ngFor="let item of this.join.today_menu">
+        <div *ngIf="item.type ==='Pizza'"></div>
+        <img [src]="item.img" [alt]="item.name" class="dish" />
+        <p class="menu-name">{{ item.name }}</p>
+      </div>
+      <div class="dish">Pepperoni Pizza</div>
+      <div class="dish">Veggie Pizza</div>
+      <div class="dish">BBQ Chicken Pizza</div>
+    </div>
+
+    <h2 id="pasta">Pasta</h2>
+    <div class="dishes">
+      <div *ngFor="let item of this.join.today_menu">
+        <div *ngIf="item.type ==='dishes'"></div>
+        <img [src]="item.img" [alt]="item.name" class="dish" />
+        <p class="menu-name">{{ item.name }}</p>
+      </div>
+      <div class="dish">Spaghetti Bolognese</div>
+      <div class="dish">Penne Alfredo</div>
+    </div>
+
+    <h2 id="juices">Juices</h2>
+    <div class="dishes">
+      <div *ngFor="let item of this.join.today_menu">
+        <div *ngIf="item.type ==='juices'"></div>
+        <img [src]="item.img" [alt]="item.name" class="dish" />
+        <p class="menu-name">{{ item.name }}</p>
+      </div>
+      <div class="dish">Orange Juice</div>
+      <div class="dish">Apple Juice</div>
+    </div>
+
+    <h2 id="desserts">Desserts</h2>
+    <div class="dishes">
+      <div *ngFor="let item of this.join.today_menu">
+        <div *ngIf="item.type ==='desserts'"></div>
+        <img [src]="item.img" [alt]="item.name" class="dish" />
+        <p class="menu-name">{{ item.name }}</p>
+      </div>
+      <div class="dish">Chocolate Cake</div>
+      <div class="dish">Cheesecake</div>
+    </div>
+  </section>
+</div>
+</body>
+

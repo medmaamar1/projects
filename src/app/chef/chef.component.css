@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://plus.unsplash.com/premium_photo-1683707120070-0c8c77bf44b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.chef-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.chef-container h2 {
+  font-size: 2.5em;
+  color: #f9a825;
+  margin-bottom: 40px;
+}
+
+.chefs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.chef-card {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.chef-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.chef-card h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #f9a825;
+}
+
+.chef-card p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.chef-card:hover {
+  transform: translateY(-10px);
+}
+
+.in-charge {
+  border: 2px solid #f9a825;
+  box-shadow: 0 6px 20px rgba(249, 168, 37, 0.6);
+}
+

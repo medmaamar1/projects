@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  display: block;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1505275350441-83dcda8eeef5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the image in place while scrolling */
+  font-family: 'Poppins', sans-serif;
+}
+
+
+main {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  
+  main h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #f9a825; /* Gold for emphasis */
+  }
+  
+  main p {
+    font-size: 1.2em;
+  }
+  
+  .special-offer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    border-radius: 10px;
+    display: inline-block;
+    color: #333; /* Dark text for contrast */
+    text-shadow: none;
+  }
+  
+  .special-offer h2 {
+    margin: 0;
+    color: #c06631;
+  }

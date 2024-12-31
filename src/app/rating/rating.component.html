@@ -1,0 +1,33 @@
+<body>
+<div class="rate-dish-container">
+    <div class="categories" *ngFor="let category of dishesByCategory | keyvalue">
+      <h2 class="category-title">{{ category.key }}</h2>
+      <div class="dish-list">
+        <div class="dish" *ngFor="let dish of this.join.ratedishes">
+          <img [src]="dish.img" alt="{{ dish.dishname }}" class="dish-image" />
+          <h3 class="dish-name">{{ dish.dishname }}</h3>
+          <div class="rating">
+            <span
+               class="star"
+               *ngFor="let star of [1, 2, 3, 4, 5]"
+                [class.active]="star <= hoveredRating" 
+                (click)="rateDish(dish, star)"
+                (mouseover)="hoverRating(star)"
+                (mouseleave)="resetHover()"
+>
+  ★
+</span>
+
+          
+          </div>
+          <textarea
+            [(ngModel)]="dish.comment"
+            placeholder="Leave a comment..."
+            class="comment-box"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+  

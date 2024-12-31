@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1592466741848-20145fe5d6d7?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  color: #fff;
+}
+
+.menu-container {
+  display: flex;
+  padding: 20px;
+}
+
+.categories {
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categories li {
+  margin: 15px 0;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #f9a825;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.menu-content {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.menu-content h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #f9a825;
+}
+
+.dishes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dish {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.dish:hover {
+  transform: scale(1.05);
+}
+

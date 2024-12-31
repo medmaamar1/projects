@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div class="login-card">
+    <button class="close-button" (click)="showlogin()">X</button>
+    <h2 class="login-title">Login</h2>
+    <div *ngIf="user_exist==false" class="user_doesnt_exist">mot de passe ou email est invalide</div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username" [(ngModel)]="username"  />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" [(ngModel)]="password" />
+    </div>
+    <button class="login-button"  (click)="showlogin()">Login</button>
+    <div class="create-account-section">
+      <span>Don't have an account?</span>
+      <button class="create-account-button" (click)="showCreateAccount()" (click)="showlogin()">Create Account</button>
+    </div>
+  </div>
+</div>
+
+
+  
