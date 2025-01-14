@@ -1,0 +1,21 @@
+<div class="effacer-container">
+    <h3>Remove Item</h3>
+  
+    <!-- For Today Menu -->
+    <div *ngIf="join.currentComponent === 'today_menu'">
+      <input [(ngModel)]="name" placeholder="Dish Name" />
+    </div>
+  
+    <!-- For Chefs -->
+    <div *ngIf="join.currentComponent === 'chefs'">
+      <input [(ngModel)]="name" placeholder="Chef Name" />
+    </div>
+  
+    <!-- For Rated Dishes -->
+    <div *ngIf="join.currentComponent === 'ratedishes'">
+      <input [(ngModel)]="name" placeholder="Dish Name" />
+    </div>
+  
+    <button (click)="removeItem()" (click)="this.join.showdelete=!this.join.showdelete">Remove</button>
+  </div>
+  

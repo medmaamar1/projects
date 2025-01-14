@@ -19,6 +19,6 @@
       <textarea [(ngModel)]="comment" placeholder="Comment"></textarea>
     </div>
   
-    <button (click)="addItem()">Add</button>
+    <button (click)="addItem()" (click)="this.join.showadd=!this.join.showadd">Add</button>
   </div>
   

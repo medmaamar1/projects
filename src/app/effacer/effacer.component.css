@@ -1,0 +1,63 @@
+/* Effacer Container Styling */
+.effacer-container {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: auto;
+    background: rgba(255, 255, 255, 0.1); /* Light translucent background */
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    width: 280px;
+  }
+  
+  /* Title Styling */
+  .effacer-container h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0078d4;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Input Styling */
+  .effacer-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .effacer-container input:focus {
+    border-color: #0078d4;
+  }
+  
+  /* Button Styling */
+  .effacer-container button {
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .effacer-container button:hover {
+    background-color: #d9534f; /* Red hover effect */
+  }
+  
+  .effacer-container button:active {
+    background-color: #ac2925; /* Darker red when active */
+  }
+  

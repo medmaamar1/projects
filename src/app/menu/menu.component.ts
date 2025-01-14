@@ -11,6 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class MenuComponent {
   constructor(public join:JoinService)
-  {}
+  {  }
+  idiot() {
+    console.log("vrai");
+    console.log(this.join.today_menu); // Log in ngOnInit to ensure data is available
+    console.log('This is a test log');
+  }
+ 
 
 }
+
+
+

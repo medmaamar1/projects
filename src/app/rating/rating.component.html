@@ -1,4 +1,4 @@
-<body>
+<div class="fullscreen-background"></div>
 <div class="rate-dish-container">
     <div class="categories" *ngFor="let category of dishesByCategory | keyvalue">
       <h2 class="category-title">{{ category.key }}</h2>
@@ -13,12 +13,7 @@
                 [class.active]="star <= hoveredRating" 
                 (click)="rateDish(dish, star)"
                 (mouseover)="hoverRating(star)"
-                (mouseleave)="resetHover()"
->
-  ★
-</span>
-
-          
+                (mouseleave)="resetHover()">★</span>         
           </div>
           <textarea
             [(ngModel)]="dish.comment"
@@ -29,5 +24,3 @@
       </div>
     </div>
   </div>
-</body>
-  

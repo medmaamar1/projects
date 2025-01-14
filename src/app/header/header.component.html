@@ -12,7 +12,7 @@
     <div class="staff-login">
       <button *ngIf="!this.join.user_logged" (click)="show_login()">Login</button>
       <button *ngIf="this.join.user_logged" (click)="show_add()" class="add-button">Add</button>
-      <button class="delete-button" >Delete</button> <!-- ziddeha condition besh totheher -->
+      <button *ngIf="this.join.user_logged" (click)="show_delete()" class="delete-button" >Delete</button> <!-- ziddeha condition besh totheher -->
 
     </div>
   </nav>

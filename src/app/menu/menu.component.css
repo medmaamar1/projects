@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
+.fullscreen-background {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+
   background: url('https://images.unsplash.com/photo-1592466741848-20145fe5d6d7?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  color: #fff;
+  position: fixed; /* Ensures the div stays in the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Ensures the image covers the entire div */
+  z-index: -1; /* Places the div behind other content */
 }
 
 .menu-container {
+  color: #fff;
   display: flex;
   padding: 20px;
 }

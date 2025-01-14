@@ -1,6 +1,16 @@
-body{   background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+.fullscreen-background{   
+    background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
+
+      position: fixed; /* Ensures the div stays in the viewport */
+      top: 0;
+      left: 0;
+      width: 100vw; /* Full viewport width */
+      height: 100vh; /* Full viewport height */
+      background-size: cover; /* Ensures the image covers the entire div */
+      z-index: -1; /* Places the div behind other content */
+    
 }
 .rate-dish-container {
     padding: 20px;

@@ -36,4 +36,8 @@ export class HeaderComponent implements OnInit {
   show_add() {
     this.join.showadd = !this.join.showadd;
   }
+  show_delete()
+  {
+    this.join.showdelete=!this.join.showdelete;
+  }
 }

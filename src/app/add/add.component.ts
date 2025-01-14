@@ -12,12 +12,12 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./add.component.css'],
 })
 export class AddComponent {
-  public name: string = '';
-  public img: string = '';
-  public type: string = ''; // For `today_menu`
-  public speciality: string = ''; // For `chefs`
-  public role: string = ''; // For `chefs`
-  public comment: string = ''; // For `ratedishes`
+   name: string = '';
+   img: string = '';
+   type: string = ''; // For `today_menu`
+   speciality: string = ''; // For `chefs`
+   role: string = ''; // For `chefs`
+   comment: string = ''; // For `ratedishes`
 
 constructor(public join:JoinService){}
 
