@@ -4,14 +4,14 @@
       <h1>Canteen Delight</h1>
     </div>
     <ul class="nav-links">
-      <li><a href="/home" (click)="component_choice='welcome-page'">Home</a></li>
-      <li><a href="/menu" (click)="component_choice='today_menu'">Today's Menu</a></li>
-      <li><a href="/ratings" (click)="component_choice='ratedishes'">Rate Dishes</a></li>
-      <li><a href="/chefs" (click)="component_choice='chefs'">Chefs & Contacts</a></li>
+      <li><a href="/home" (click)="navigate('welcome-page') ">Home</a></li>
+      <li><a href="/menu" (click)="navigate('today_menu')">Today's Menu</a></li>
+      <li><a href="/ratings" (click)="navigate('ratedishes')">Rate Dishes</a></li>
+      <li><a href="/chefs" (click)="navigate('chefs')">Chefs & Contacts</a></li>
     </ul>
     <div class="staff-login">
       <button *ngIf="!this.join.user_logged" (click)="show_login()">Login</button>
-      <button *ngIf="this.join.user_logged" class="add-button" >Add</button>
+      <button *ngIf="this.join.user_logged" (click)="show_add()" class="add-button">Add</button>
       <button class="delete-button" >Delete</button> <!-- ziddeha condition besh totheher -->
 
     </div>

@@ -16,7 +16,7 @@ import { AddComponent } from "./add/add.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, WelcomePageComponent, FormsModule, CommonModule, HeaderComponent, FooterComponent, MenuComponent, ChefComponent, RatingComponent, WelcomePageComponent, LoginComponent, CreateAccountComponent, AddComponent],
+  imports: [RouterOutlet, FormsModule, CommonModule, HeaderComponent, FooterComponent,  LoginComponent, CreateAccountComponent, AddComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -35,6 +35,12 @@ export class AppComponent {
     return this.join.shown
   }
   closeLogin()
-  {this.join.shown=false;}
+  {
+    this.join.shown=false;
+  }
+  appear_add()
+  {
+    return this.join.showadd;
+  }
 }
 

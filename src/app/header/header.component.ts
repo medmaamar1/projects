@@ -1,32 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { JoinService } from '../join.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AddComponent } from '../add/add.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FormsModule,CommonModule,AddComponent],
+  imports: [FormsModule, CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  component_choice = '';
 
-  constructor(public join:JoinService)
-  { 
-    this.join.currentComponent=this.component_choice;
-  }
-  component_choice="";
+  constructor(public join: JoinService) {}
 
-  showCreateAccount()
-  {
-    this.join.show_create_account=false;
-  }
-  
-  show_login()
-  {
-    this.join.shown=!this.join.shown;
+  ngOnInit() {
+    this.join.init(); // Initialize localStorage value
+    console.log('Loaded Component:', this.join.currentComponent);
   }
 
+  navigate(choice: string) {
+    this.join.currentComponent = choice; // Persist choice in localStorage
+    console.log('Navigated to:', this.join.currentComponent);
+  }
+
+  showCreateAccount() {
+    this.join.show_create_account = false;
+  }
+
+  show_login() {
+    this.join.shown = !this.join.shown;
+  }
+
+  show_add() {
+    this.join.showadd = !this.join.showadd;
+  }
 }
