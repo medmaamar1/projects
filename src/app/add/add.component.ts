@@ -18,6 +18,8 @@ export class AddComponent {
    speciality: string = ''; // For `chefs`
    role: string = ''; // For `chefs`
    comment: string = ''; // For `ratedishes`
+   experience:string='';
+   phone:string='';
 
 constructor(public join:JoinService){}
 
@@ -25,7 +27,7 @@ constructor(public join:JoinService){}
     if (this.join.currentComponent === 'today_menu') {
       this.join.today_menu.push({ name: this.name, img: this.img, type: this.type });
     } else if (this.join.currentComponent === 'chefs') {
-      this.join.chefs.push({ chefname: this.name, img: this.img, speciality: this.speciality, role: this.role });
+      this.join.chefs.push({ chefname: this.name, img: this.img, speciality: this.speciality, role: this.role ,phone:this.phone,experience:this.experience,});
     } else if (this.join.currentComponent === 'ratedishes') {
       this.join.ratedishes.push({ dishname: this.name, img: this.img, comment: this.comment });
     }

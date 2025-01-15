@@ -11,10 +11,10 @@
 <div *ngIf="appear__create_account()==true" class="login-overlay">
     <app-create-account></app-create-account>
 </div>
-<div *ngIf="appear_add()==true && appear_delete()==!true " class="login-overlay">
+<div *ngIf="appear_add()==true  " class="login-overlay">
     <app-add></app-add>
 </div>
-<div *ngIf="appear_delete()==true && appear_add()==!true" class="login-overlay">
+<div *ngIf="appear_delete()==true " class="login-overlay">
     <app-effacer></app-effacer>
 </div>
 

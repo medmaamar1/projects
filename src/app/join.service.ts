@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class JoinService {
+  private apiUrl = 'http://127.0.0.1:5000/api'; // Base URL for your Flask API
+
+  
   public backgrounds: { component: string, backgroundUrl: string }[] = [
     {
       component: 'welcome-page',
@@ -32,9 +36,6 @@ export class JoinService {
   // Initialize persistent login state
   private _user_logged: boolean = false;
 
-  constructor() {
-    this.init(); // Ensure data is initialized when the service is created
-  }
 
   init() {
     if (typeof window !== 'undefined' && window.localStorage) {
@@ -76,6 +77,9 @@ export class JoinService {
 
   public users: { username: string; password: string }[] = [];
   public today_menu: { name: string; img: string; type: string }[] = [];
-  public chefs: { chefname: string; img: string; speciality: string; role: string }[] = [];
+  public chefs: { chefname: string; img: string; speciality: string; role: string ; phone:string;experience:string}[] = [];
   public ratedishes: { dishname: string; img: string; comment: string }[] = [];
+ 
+
+  
 }

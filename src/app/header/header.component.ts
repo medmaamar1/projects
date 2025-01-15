@@ -40,4 +40,6 @@ export class HeaderComponent implements OnInit {
   {
     this.join.showdelete=!this.join.showdelete;
   }
+  comp="";
+  compo(){return this.comp=this.join.currentComponent;}
 }

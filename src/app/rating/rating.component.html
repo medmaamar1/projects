@@ -1,23 +1,39 @@
-<div class="fullscreen-background"></div>
-<div class="rate-dish-container">
-    <div class="categories" *ngFor="let category of dishesByCategory | keyvalue">
-      <h2 class="category-title">{{ category.key }}</h2>
-      <div class="dish-list">
-        <div class="dish" *ngFor="let dish of this.join.ratedishes">
-          <img [src]="dish.img" alt="{{ dish.dishname }}" class="dish-image" />
-          <h3 class="dish-name">{{ dish.dishname }}</h3>
+<div class="menu-container">
+    <!-- Boucle sur chaque catégorie -->
+    <div *ngFor="let category of dishesByCategory">
+      <!-- Titre de la catégorie -->
+      <h2 class="category-title">{{ category.category }}</h2>
+  
+      <!-- Conteneur des plats -->
+  
+      <div class="dishes">
+        <!-- Boucle sur chaque plat dans la catégorie -->
+        <div *ngFor="let dish of category.dishes" class="dish-container">
+          <!-- Image du plat -->
+          <img [src]="dish.image" [alt]="dish.name" class="dish-image" />
+  
+          <!-- Nom du plat -->
+          <p class="dish-name">{{ dish.name }}</p>
+  
+          <!-- Section de notation -->
           <div class="rating">
+            <!-- Boucle pour afficher 5 étoiles -->
             <span
-               class="star"
-               *ngFor="let star of [1, 2, 3, 4, 5]"
-                [class.active]="star <= hoveredRating" 
-                (click)="rateDish(dish, star)"
-                (mouseover)="hoverRating(star)"
-                (mouseleave)="resetHover()">★</span>         
+              *ngFor="let star of [1, 2, 3, 4, 5]"
+              class="star"
+              [class.filled]="star <= (hoveredRating || dish.rating)"
+              (mouseover)="hoverRating(star)"
+              (mouseleave)="resetHover()"
+              (click)="rateDish(dish, star)"
+            >
+              ★
+            </span>
           </div>
+  
+          <!-- Section de commentaire optionnelle -->
           <textarea
             [(ngModel)]="dish.comment"
-            placeholder="Leave a comment..."
+            placeholder="Add your comment..."
             class="comment-box"
           ></textarea>
         </div>

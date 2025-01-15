@@ -14,6 +14,7 @@ import { Injectable } from '@angular/core';
 import { CreateAccountComponent } from "./create-account/create-account.component";
 import { AddComponent } from "./add/add.component";
 import { EffacerComponent } from "./effacer/effacer.component";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -41,24 +42,14 @@ export class AppComponent {
   }
   appear_add()
   {
-    return this.join.showadd;
+    return this.join.showadd ;
   }
   appear_delete()
   {
     return this.join.showdelete;
   }
-  backgroundurl=''
-  background() {
-    if (this.join.currentComponent === "welcome-page") {
-      this.backgroundurl = 'https://images.unsplash.com/photo-1592466741848-20145fe5d6d7?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    } else if (this.join.currentComponent === "today_menu") {
-      this.backgroundurl = 'https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    } else if (this.join.currentComponent === "ratedishes") {
-      this.backgroundurl = 'https://images.unsplash.com/photo-1505275350441-83dcda8eeef5?q=80&w=1974&auto=format&fit=crop&ixib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    } else if (this.join.currentComponent === "chefs") {
-      this.backgroundurl = 'https://plus.unsplash.com/premium_photo-1683707120070-0c8c77bf44b6?q=80&w=2070&auto=format&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    }
-  }
+ 
+  
   
 }
 
